@@ -7,7 +7,7 @@ const kitchenToolsData = [
   {
     id: 1,
     name: "محضرة الطعام الذكية",
-    image:"https://www.bing.com/images/search?view=detailV2&ccid=PjoM0ZqY&id=DD0487B9EA80F69AD33910099BEFCBAE1A8A25C1&thid=OIP.PjoM0ZqYwxfu39D5N9pM-AHaGP&mediaurl=https%3a%2f%2fimages.philips.com%2fis%2fimage%2fphilipsconsumer%2f13b2252e86d94cc488ccad140111df02%3f%24jpglarge%24%26wid%3d960&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.3e3a0cd19a98c317eedfd0f937da4cf8%3frik%3dwSWKGq7L75sJEA%26pid%3dImgRaw%26r%3d0&exph=810&expw=960&q=%d9%85%d8%ad%d8%b6%d8%b1%d8%a9+%d8%a7%d9%84%d8%b7%d8%b9%d8%a7%d9%85+%d8%a7%d9%84%d8%b0%d9%83%d9%8a%d8%a9&FORM=IRPRST&ck=E30FC2C4B6A6A8114041E16A358BD966&selectedIndex=2&itb=0",
+    image:"https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223015370157_1.jpg",
     description: "محضرة طعام متعددة الوظائف، تقوم بالتقطيع، الخلط، والعجن بلمسة زر واحدة. تصميمها الأنيق يضيف لمسة عصرية لمطبخك.",
     benefits: [
       "توفير الوقت والجهد بشكل كبير",
@@ -40,7 +40,7 @@ const kitchenToolsData = [
   {
     id: 4,
     name: "فرن كهربائي متعدد الوظائف",
-    image: "https://www.bing.com/images/search?view=detailV2&ccid=sD6aaY2E&id=53995F459529ECC6FBE2A26632BF3CAAC7419C66&thid=OIP.sD6aaY2EVjYQDsAcvkikwwHaHa&mediaurl=https%3a%2f%2fmcprod.hyperone.com.eg%2fmedia%2fcatalog%2fproduct%2fcache%2f8d4e6327d79fd11192282459179cc69e%2f6%2f2%2f6223015370157.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.b03e9a698d845636100ec01cbe48a4c3%3frik%3dZpxBx6o8vzJmog%26pid%3dImgRaw%26r%3d0&exph=800&expw=800&q=%d9%81%d8%b1%d9%86+%d9%83%d9%87%d8%b1%d8%a8%d8%a7%d8%a6%d9%8a+%d9%85%d8%aa%d8%b9%d8%af%d8%af+%d8%a7%d9%84%d9%88%d8%b8%d8%a7%d8%a6%d9%81&FORM=IRPRST&ck=7AE235190645AF76C26B7D559689D426&selectedIndex=1&itb=0",
+    image: "https://mcprod.hyperone.com.eg/media/catalog/product/cache/8d4e6327d79fd11192282459179cc69e/6/2/6223015370157_1.jpg",
     description: "فرن كهربائي مدمج يجمع بين وظائف الشواء والتحمير والخبز، مما يجعله الحل الأمثل للمطابخ الصغيرة.",
     benefits: [
       "يوفر مساحة في المطبخ",
