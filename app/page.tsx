@@ -7,7 +7,7 @@ const kitchenToolsData = [
   {
     id: 1,
     name: "محضرة الطعام الذكية",
-    image:"https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:"https://www.bing.com/images/search?view=detailV2&ccid=PjoM0ZqY&id=DD0487B9EA80F69AD33910099BEFCBAE1A8A25C1&thid=OIP.PjoM0ZqYwxfu39D5N9pM-AHaGP&mediaurl=https%3a%2f%2fimages.philips.com%2fis%2fimage%2fphilipsconsumer%2f13b2252e86d94cc488ccad140111df02%3f%24jpglarge%24%26wid%3d960&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.3e3a0cd19a98c317eedfd0f937da4cf8%3frik%3dwSWKGq7L75sJEA%26pid%3dImgRaw%26r%3d0&exph=810&expw=960&q=%d9%85%d8%ad%d8%b6%d8%b1%d8%a9+%d8%a7%d9%84%d8%b7%d8%b9%d8%a7%d9%85+%d8%a7%d9%84%d8%b0%d9%83%d9%8a%d8%a9&FORM=IRPRST&ck=E30FC2C4B6A6A8114041E16A358BD966&selectedIndex=2&itb=0",
     description: "محضرة طعام متعددة الوظائف، تقوم بالتقطيع، الخلط، والعجن بلمسة زر واحدة. تصميمها الأنيق يضيف لمسة عصرية لمطبخك.",
     benefits: [
       "توفير الوقت والجهد بشكل كبير",
@@ -18,7 +18,7 @@ const kitchenToolsData = [
   {
     id: 2,
     name: "ميزان المطبخ الرقمي",
-    image: "https://images.unsplash.com/photo-1616790382833-25a07151e245?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwyMHx8ZGlnaXRhbCUyMGtpY2hlbiUyMHNjYWxlfGVufDB8fHx8MTcwNzk0NDQ4NHww&ixlib=rb-4.0.3&q=80&w=1080",
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=2H%2fSxhqL&id=E7C6DEA6772E5245113804CCCA3BDFCBA14384FA&thid=OIP.2H_SxhqLmRiQ0csV_uJNXAHaGS&mediaurl=https%3a%2f%2fm.media-amazon.com%2fimages%2fI%2f61h3EK4H%2brL._AC_SL1500_.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.d87fd2c61a8b991890d1cb15fee24d5c%3frik%3d%252boRDocvfO8rMBA%26pid%3dImgRaw%26r%3d0&exph=1273&expw=1500&q=%d9%85%d9%8a%d8%b2%d8%a7%d9%86+%d8%a7%d9%84%d9%85%d8%b7%d8%a8%d8%ae+%d8%a7%d9%84%d8%b1%d9%82%d9%85%d9%8a&FORM=IRPRST&ck=9CED4C4F88BE28809028E00D2291EB78&selectedIndex=1&itb=0",
     description: "ميزان عالي الدقة لقياس المكونات بدقة فائقة، مثالي للخبز وصناعة الحلويات التي تتطلب مقادير مضبوطة.",
     benefits: [
       "دقة متناهية في جميع الوصفات",
@@ -29,7 +29,7 @@ const kitchenToolsData = [
   {
     id: 3,
     name: "خلاط العصائر المحمول",
-    image: "https://images.unsplash.com/photo-1627993078864-f6511b846e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwyMnx8cG9ydGFibGUlMjBqb29nZXJ8ZW58MHx8fHwxNzA3OTQ1MDA0fDA&ixlib=rb-4.0.3&q=80&w=1080",
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=Vx7SzxFd&id=015F56C7215FC7F2F0F4239215E3621F8F48DD38&thid=OIP.Vx7SzxFdVoEJpU6KW5YA0gHaHa&mediaurl=https%3a%2f%2fgomlitna.com%2fwp-content%2fuploads%2f2023%2f07%2f0bb79f7a-dfef-4df6-bb62-4f66b7c36ad1.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.571ed2cf115d568109a54e8a5b9600d2%3frik%3dON1Ijx9i4xWSIw%26pid%3dImgRaw%26r%3d0&exph=1000&expw=1000&q=%d8%ae%d9%84%d8%a7%d8%b7+%d8%a7%d9%84%d8%b9%d8%b5%d8%a7%d8%a6%d8%b1+%d8%a7%d9%84%d9%85%d8%ad%d9%85%d9%88%d9%84&FORM=IRPRST&ck=522D798305FC529D022D002799C96081&selectedIndex=6&itb=0",
     description: "خلاط شخصي صغير ومحمول، يمكنك استخدامه لإعداد العصائر والسموذي في أي مكان، سواء في المنزل أو أثناء التنقل.",
     benefits: [
       "إعداد العصائر بسرعة وفي أي مكان",
@@ -40,7 +40,7 @@ const kitchenToolsData = [
   {
     id: 4,
     name: "فرن كهربائي متعدد الوظائف",
-    image: "https://images.unsplash.com/photo-1628045995836-84d4b17f541b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwxNXx8ZWxlY3RyaWMlMjBvdmVufGVufDB8fHx8MTcwNzk0NDgwMnww&ixlib=rb-4.0.3&q=80&w=1080",
+    image: "https://www.bing.com/images/search?view=detailV2&ccid=sD6aaY2E&id=53995F459529ECC6FBE2A26632BF3CAAC7419C66&thid=OIP.sD6aaY2EVjYQDsAcvkikwwHaHa&mediaurl=https%3a%2f%2fmcprod.hyperone.com.eg%2fmedia%2fcatalog%2fproduct%2fcache%2f8d4e6327d79fd11192282459179cc69e%2f6%2f2%2f6223015370157.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.b03e9a698d845636100ec01cbe48a4c3%3frik%3dZpxBx6o8vzJmog%26pid%3dImgRaw%26r%3d0&exph=800&expw=800&q=%d9%81%d8%b1%d9%86+%d9%83%d9%87%d8%b1%d8%a8%d8%a7%d8%a6%d9%8a+%d9%85%d8%aa%d8%b9%d8%af%d8%af+%d8%a7%d9%84%d9%88%d8%b8%d8%a7%d8%a6%d9%81&FORM=IRPRST&ck=7AE235190645AF76C26B7D559689D426&selectedIndex=1&itb=0",
     description: "فرن كهربائي مدمج يجمع بين وظائف الشواء والتحمير والخبز، مما يجعله الحل الأمثل للمطابخ الصغيرة.",
     benefits: [
       "يوفر مساحة في المطبخ",
