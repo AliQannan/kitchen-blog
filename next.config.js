@@ -1,17 +1,11 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // إضافة هذا الجزء إلى ملف التكوين
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'img.alicdn.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'ae01.alicdn.com',
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
       },
