@@ -1,94 +1,105 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
+"use client"
+import Image from 'next/image';
 
-const products = [
+
+// بيانات أدوات المطبخ
+const kitchenToolsData = [
   {
     id: 1,
-    title: "أفضل أدوات تقطيع الخضار",
-    description: "تعرف على أدوات تقطيع الخضار التي تجعل تحضير الطعام أسرع وأسهل.",
-    image: "https://img.alicdn.com/imgextra/i1/615133320/O1CN01eZyq4q1Z1i9q3j1Qq_!!615133320.jpg",
-    category: "أدوات يدوية",
-    price: "$12.99",
-    rating: 4.8,
+    name: "محضرة الطعام الذكية",
+    image: "https://images.unsplash.com/photo-1621345513824-c1157c14a93c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwyMHx8a2l0Y2hlbiUyMGZvb2QlMjBwcm9jZXNzb3J8ZW58MHx8fHwxNzA3OTQ0NTQ1fDA&ixlib=rb-4.0.3&q=80&w=1080",
+    description: "محضرة طعام متعددة الوظائف، تقوم بالتقطيع، الخلط، والعجن بلمسة زر واحدة. تصميمها الأنيق يضيف لمسة عصرية لمطبخك.",
+    benefits: [
+      "توفير الوقت والجهد بشكل كبير",
+      "نتائج مثالية وموحدة في التقطيع والخلط",
+      "سهولة التنظيف بفضل أجزائها القابلة للإزالة"
+    ]
   },
   {
     id: 2,
-    title: "مقالي غير لاصقة للطهي الصحي",
-    description: "اختر المقلاة الصحيحة للحفاظ على صحتك وطعم الطعام اللذيذ.",
-    image: "https://img.alicdn.com/imgextra/i3/789026534/O1CN01L5Z1tU1a4u8d2q3XG_!!789026534.jpg",
-    category: "أواني طهي",
-    price: "$24.50",
-    rating: 4.9,
+    name: "ميزان المطبخ الرقمي",
+    image: "https://images.unsplash.com/photo-1616790382833-25a07151e245?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwyMHx8ZGlnaXRhbCUyMGtpY2hlbiUyMHNjYWxlfGVufDB8fHx8MTcwNzk0NDQ4NHww&ixlib=rb-4.0.3&q=80&w=1080",
+    description: "ميزان عالي الدقة لقياس المكونات بدقة فائقة، مثالي للخبز وصناعة الحلويات التي تتطلب مقادير مضبوطة.",
+    benefits: [
+      "دقة متناهية في جميع الوصفات",
+      "تحكم أفضل في الكميات لنتائج مضمونة",
+      "تصميم صغير وخفيف الوزن لسهولة التخزين"
+    ]
   },
   {
     id: 3,
-    title: "خلاطات كهربائية متعددة الاستخدام",
-    description: "خلاطات للعصائر والصلصات بسرعة وبدون مجهود.",
-    image: "https://img.alicdn.com/imgextra/i1/2203732066/O1CN01VzJ3kI1N1lZ1s6h3p_!!2203732066.jpg",
-    category: "أجهزة كهربائية",
-    price: "$39.99",
-    rating: 4.7,
+    name: "خلاط العصائر المحمول",
+    image: "https://images.unsplash.com/photo-1627993078864-f6511b846e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwyMnx8cG9ydGFibGUlMjBqb29nZXJ8ZW58MHx8fHwxNzA3OTQ1MDA0fDA&ixlib=rb-4.0.3&q=80&w=1080",
+    description: "خلاط شخصي صغير ومحمول، يمكنك استخدامه لإعداد العصائر والسموذي في أي مكان، سواء في المنزل أو أثناء التنقل.",
+    benefits: [
+      "إعداد العصائر بسرعة وفي أي مكان",
+      "سهل التنظيف والاستخدام",
+      "بطارية تدوم طويلاً"
+    ]
   },
+  {
+    id: 4,
+    name: "فرن كهربائي متعدد الوظائف",
+    image: "https://images.unsplash.com/photo-1628045995836-84d4b17f541b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwxNXx8ZWxlY3RyaWMlMjBvdmVufGVufDB8fHx8MTcwNzk0NDgwMnww&ixlib=rb-4.0.3&q=80&w=1080",
+    description: "فرن كهربائي مدمج يجمع بين وظائف الشواء والتحمير والخبز، مما يجعله الحل الأمثل للمطابخ الصغيرة.",
+    benefits: [
+      "يوفر مساحة في المطبخ",
+      "نتائج تحمير وخبز ممتازة",
+      "درجات حرارة قابلة للتحكم بدقة"
+    ]
+  }
 ];
 
+// المكون الرئيسي للصفحة
 export default function Home() {
   return (
-    <div dir="rtl" className="min-h-screen bg-gray-50">
-      <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2 space-x-reverse">
-          <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-600 text-white flex items-center justify-center font-bold rounded-full shadow-md">
-            GzP
-          </div>
-          <span className="text-2xl font-bold text-gray-800">مدونة المطبخ</span>
+    <>
+      {/* Navbar - شريط التنقل */}
+      <nav className="flex items-center justify-between p-6 bg-white shadow-md">
+        <div className="flex items-center">
+          <span className="text-2xl font-bold text-gray-800">مدونة أدوات المطبخ</span>
+        </div>
+        <div className="flex space-x-4">
+          <a href="#" className="text-gray-600 hover:text-gray-900 font-semibold">الرئيسية</a>
         </div>
       </nav>
 
-      <header className="bg-gradient-to-r from-red-500 to-pink-600 text-white py-16 mt-2">
-        <div className="text-center max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl font-extrabold mb-4">🍳 مقالات الطبخ وأدوات المطبخ</h1>
-          <p className="text-xl opacity-90">اكتشف أفضل المنتجات الذكية لمطبخك</p>
-        </div>
-      </header>
+      {/* المحتوى الرئيسي للمدونة */}
+      <main className="container mx-auto p-8">
+        <h1 className="text-4xl font-extrabold text-center mb-12 text-gray-900">
+          دليلك لأفضل أدوات المطبخ العصرية
+        </h1>
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <Link
-              href={`/product/${product.id}`}
-              key={product.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 transform"
-            >
-              <div className="h-64 overflow-hidden">
+        {/* عرض أدوات المطبخ */}
+        <div className="space-y-12">
+          {kitchenToolsData.map((tool) => (
+            <div key={tool.id} className="bg-white rounded-lg shadow-xl overflow-hidden md:flex flex-row-reverse">
+              {/* جزء الصورة */}
+              <div className="relative w-full h-80 md:w-1/2">
                 <Image
-                  src={product.image}
-                  alt={product.title}
-                  width={400}
-                  height={300}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  src={tool.image}
+                  alt={tool.name}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-lg md:rounded-l-none md:rounded-r-lg"
+                  unoptimized={true} // لتجنب مشاكل التحسين مع الصور الخارجية
                 />
               </div>
-              <div className="p-6">
-                <span className="inline-block text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full mb-2">
-                  {product.category}
-                </span>
-                <h2 className="text-2xl font-bold text-gray-800 mb-2">{product.title}</h2>
-                <p className="text-gray-600 mb-3">{product.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-semibold text-red-600">{product.price}</span>
-                  <span className="text-yellow-500">⭐ {product.rating}</span>
-                </div>
+              {/* جزء المحتوى */}
+              <div className="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+                <h2 className="text-3xl font-bold mb-4 text-gray-800">{tool.name}</h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">{tool.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-gray-700">فوائده الرئيسية:</h3>
+                <ul className="list-disc list-inside text-gray-600 space-y-2">
+                  {tool.benefits.map((benefit, index) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
+                </ul>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </main>
-
-      <footer className="bg-gray-900 text-gray-300 text-center py-8 mt-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <p>© {new Date().getFullYear()} مدونة المطبخ. جميع الحقوق محفوظة.</p>
-        </div>
-      </footer>
-    </div>
+    </>
   );
 }
