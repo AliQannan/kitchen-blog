@@ -7,7 +7,7 @@ const kitchenToolsData = [
   {
     id: 1,
     name: "محضرة الطعام الذكية",
-    image: "https://images.unsplash.com/photo-1621345513824-c1157c14a93c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODU5OTV8MHwxfHNlYXJjaHwyMHx8a2l0Y2hlbiUyMGZvb2QlMjBwcm9jZXNzb3J8ZW58MHx8fHwxNzA3OTQ0NTQ1fDA&ixlib=rb-4.0.3&q=80&w=1080",
+    image:"https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "محضرة طعام متعددة الوظائف، تقوم بالتقطيع، الخلط، والعجن بلمسة زر واحدة. تصميمها الأنيق يضيف لمسة عصرية لمطبخك.",
     benefits: [
       "توفير الوقت والجهد بشكل كبير",
