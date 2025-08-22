@@ -1,13 +1,14 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link'; // ✨ استيراد مكون Link من Next.js
 
 // بيانات أدوات المطبخ
 const kitchenToolsData = [
   {
     id: 1,
     name: "محضرة الطعام الذكية",
-    image: "https://cdn.pixabay.com/photo/2016/11/29/09/24/food-1867280_1280.jpg", // صورة محضرة الطعام الذكية
+    image: "https://cdn.pixabay.com/photo/2016/11/29/09/24/food-1867280_1280.jpg", 
     icon: "🥘",
     description: "محضرة طعام متعددة الوظائف، تقوم بالتقطيع، الخلط، والعجن بلمسة زر واحدة. تصميمها الأنيق يضيف لمسة عصرية لمطبخك.",
     benefits: [
@@ -20,7 +21,7 @@ const kitchenToolsData = [
   {
     id: 2,
     name: "ميزان المطبخ الرقمي",
-    image: "https://cdn.pixabay.com/photo/2016/11/29/09/25/scale-1867281_1280.jpg", // صورة ميزان المطبخ الرقمي
+    image: "https://cdn.pixabay.com/photo/2016/11/29/09/25/scale-1867281_1280.jpg", 
     icon: "⚖️",
     description: "ميزان عالي الدقة لقياس المكونات بدقة فائقة، مثالي للخبز وصناعة الحلويات التي تتطلب مقادير مضبوطة.",
     benefits: [
@@ -33,7 +34,7 @@ const kitchenToolsData = [
   {
     id: 3,
     name: "خلاط العصائر المحمول",
-    image: "https://cdn.pixabay.com/photo/2016/11/29/09/26/blender-1867282_1280.jpg", // صورة خلاط العصائر المحمول
+    image: "https://cdn.pixabay.com/photo/2016/11/29/09/26/blender-1867282_1280.jpg", 
     icon: "🥤",
     description: "خلاط شخصي صغير ومحمول، يمكنك استخدامه لإعداد العصائر والسموذي في أي مكان، سواء في المنزل أو أثناء التنقل.",
     benefits: [
@@ -46,7 +47,7 @@ const kitchenToolsData = [
   {
     id: 4,
     name: "فرن كهربائي متعدد الوظائف",
-    image: "https://cdn.pixabay.com/photo/2016/11/29/09/27/oven-1867283_1280.jpg", // صورة فرن كهربائي متعدد الوظائف
+    image: "https://cdn.pixabay.com/photo/2016/11/29/09/27/oven-1867283_1280.jpg", 
     icon: "🔥",
     description: "فرن كهربائي مدمج يجمع بين وظائف الشواء والتحمير والخبز، مما يجعله الحل الأمثل للمطابخ الصغيرة.",
     benefits: [
@@ -108,6 +109,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // إضافة المسارات (href) لصفحاتك الجديدة
+  const navItems = [
+    { name: 'الرئيسية', href: '/' },
+    { name: 'الأدوات', href: '/tools' },
+    { name: 'التقييمات', href: '/reviews' },
+    { name: 'تواصل معنا', href: '/contact' }
+  ];
+
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -118,21 +127,22 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center"> 
             <span className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               🍳 مدونة أدوات المطبخ
             </span>
-          </div>
+          </Link>
           <div className="hidden md:flex space-x-6 space-x-reverse">
-            {['الرئيسية', 'الأدوات', 'التقييمات', 'تواصل معنا'].map((item) => (
-              <a
-                key={item}
-                href="#"
+            {navItems.map((item) => (
+              // 🔄 استخدام مكون Link بدلاً من <a>
+              <Link
+                key={item.name}
+                href={item.href}
                 className="relative px-4 py-2 text-gray-700 font-semibold rounded-full transition-all duration-300 hover:text-white group overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 rounded-full"></span>
-                <span className="relative z-10">{item}</span>
-              </a>
+                <span className="relative z-10">{item.name}</span>
+              </Link>
             ))}
           </div>
         </div>
@@ -160,11 +170,9 @@ const ToolCard = ({ tool, index }) => {
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      {/* شريط ملون علوي */}
       <div className={`h-1 bg-gradient-to-r ${tool.gradient}`} />
       
       <div className={`grid ${index % 2 === 0 ? 'md:grid-cols-2' : 'md:grid-cols-2'} min-h-[400px]`}>
-        {/* قسم الصورة */}
         <div 
           className={`relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center ${
             index % 2 === 0 ? 'order-1' : 'order-2'
@@ -191,7 +199,6 @@ const ToolCard = ({ tool, index }) => {
           )}
         </div>
 
-        {/* قسم المحتوى */}
         <div className={`p-8 md:p-12 flex flex-col justify-center ${
           index % 2 === 0 ? 'order-2' : 'order-1'
         }`}>
